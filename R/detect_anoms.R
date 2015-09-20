@@ -86,7 +86,8 @@ detect_anoms <- function(data, k = 0.49, alpha = 0.05, num_obs_per_period = NULL
         }
 
         # protect against constant time series
-        data_sigma <- func_sigma(data[[2L]])
+        data_sigma <- 2
+        #func_sigma(data[[2L]])
         if(data_sigma == 0) 
             break
 
