@@ -98,7 +98,7 @@ detect_anoms <- function(data, k = 0.49, alpha = 0.05, num_obs_per_period = NULL
         #R_idx[i] <- data[[1L]][temp_max_idx]
 
         ###data <- data[-which(data[[1L]] == R_idx[i]), ]
-
+          ]
         ## Compute critical value.
         if(one_tail){
             p <- 1 - alpha/(n-i+1)
