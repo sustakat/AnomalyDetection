@@ -86,18 +86,18 @@ detect_anoms <- function(data, k = 0.49, alpha = 0.05, num_obs_per_period = NULL
         }
 
         # protect against constant time series
-        data_sigma <- func_sigma(data[[2L]])
-        if(data_sigma == 0) 
-            next
+        #data_sigma <- func_sigma(data[[2L]])
+        #if(data_sigma == 0) 
+            #break
 
-        ares <- ares/data_sigma
-        R <- max(ares)
+        #ares <- ares/data_sigma
+        #R <- max(ares)
 
-        temp_max_idx <- which(ares == R)[1L]
+        #temp_max_idx <- which(ares == R)[1L]
 
-        R_idx[i] <- data[[1L]][temp_max_idx]
+        #R_idx[i] <- data[[1L]][temp_max_idx]
 
-        data <- data[-which(data[[1L]] == R_idx[i]), ]
+        ###data <- data[-which(data[[1L]] == R_idx[i]), ]
 
         ## Compute critical value.
         if(one_tail){
